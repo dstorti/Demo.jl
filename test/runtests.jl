@@ -13,8 +13,10 @@ end
 end
 
 @testset "my_f" begin
-    x, y, n = 1., 1., 2
+    x, y, z, n = 1., 1., 1., 2
     @test Demo.my_f(x,y,n) == 1.
-    x, y, n = 0.5, 0.5, 2
+    @test Demo.my_f(x,y,z,n) == 2.
+    x, y= 0.5, 0.5
     @test Demo.my_f(x,y,n) == -0.5
+    @test Demo.my_f(x,y,z,n) == 0.5
 end
